@@ -13,7 +13,6 @@ class User {
 //Hàm lấy dữ liệu về và ghi ra màn hình
 async function showData(page, pageSize = 5, category = "sports", search = "") {
   let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=${pageSize}&page=${page}&${search}apiKey=3d27c44ec6474e28a77815835df96fa9`;
-  console.log(url);
   let response = await fetch(url);
   let data = await response.json();
   let articles = data.articles;
